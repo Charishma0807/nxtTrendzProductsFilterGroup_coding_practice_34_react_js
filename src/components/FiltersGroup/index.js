@@ -31,10 +31,10 @@ const FiltersGroup = props => {
     })
   }
 
-  const renderRatingsFilter = () => (
+  const renderRatingsFilters = () => (
     <div>
       <h1 className="rating-heading">Rating</h1>
-      <ul className="ratings-list">{renderRatingsFiltersList}</ul>
+      <ul className="ratings-list">{renderRatingsFiltersList()}</ul>
     </div>
   )
 
@@ -64,7 +64,7 @@ const FiltersGroup = props => {
   const renderProductCategories = () => (
     <>
       <h1 className="category-heading">Category</h1>
-      <ul className="categories-list">{renderCategoriesList}</ul>
+      <ul className="categories-list">{renderCategoriesList()}</ul>
     </>
   )
 
@@ -105,7 +105,7 @@ const FiltersGroup = props => {
     <div className="filters-group-container">
       {renderSearchInput()}
       {renderProductCategories()}
-      {renderRatingsFilter()}
+      {renderRatingsFilters()}
       <button
         type="button"
         className="clear-filters-btn"

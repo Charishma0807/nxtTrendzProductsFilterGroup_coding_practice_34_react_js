@@ -100,7 +100,7 @@ class AllProductsSection extends Component {
       searchInput,
       activeRatingId,
     } = this.state
-    const apiUrl = `https://apis.ccbp.in/products?sort_by=${activeOptionId}&category=${activeCategoryId}&titleSearch=${searchInput}&rating=${activeRatingId}`
+    const apiUrl = `https://apis.ccbp.in/products?sort_by=${activeOptionId}&category=${activeCategoryId}&title_search=${searchInput}&rating=${activeRatingId}`
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
@@ -147,7 +147,7 @@ class AllProductsSection extends Component {
         Oops! Something Went Wrong
       </h1>
       <p className="products-failure-description">
-        we are having some trouble processing your request. Please try again.
+        We are having some trouble processing your request. Please try again.
       </p>
     </div>
   )
@@ -178,8 +178,8 @@ class AllProductsSection extends Component {
       <div className="no-products-view">
         <img
           src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-no-products-view.png "
-          className="no-product-image"
-          alt="np products"
+          className="no-products-img"
+          alt="no products"
         />
         <h1 className="no-products-heading">No Products Found</h1>
         <p className="no-products-description">
@@ -246,7 +246,7 @@ class AllProductsSection extends Component {
           activeRatingId={activeRatingId}
           changeCategory={this.changeCategory}
           changeRating={this.changeRating}
-          clearFilters={this.changeFilters}
+          clearFilters={this.clearFilters}
         />
         {this.renderAllProducts()}
       </div>
